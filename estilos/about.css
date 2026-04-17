@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fff0f0, #ffe4e4);
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+nav, section {
+    padding: 60px 10%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    background: rgba(255, 240, 240, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #610000; 
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #222;
+    position: relative;
+    font-weight: 500;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #a4161a;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #a4161a;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.btn-primary {
+    padding: 12px 22px;
+    border: none;
+    background: linear-gradient(135deg, #a4161a, #610000);
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(164, 22, 26, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(164, 22, 26, 0.5);
+}
+
+.btn-outline {
+    padding: 12px 22px;
+    border: 2px solid #a4161a; 
+    background: transparent;
+    color: #a4161a;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: #a4161a; 
+    color: white;
+    transform: translateY(-3px);
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: right; 
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.hero-text span {
+    color: #a4161a; 
+}
+
+.description {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.hero-image img {
+    width: 350px;
+    max-width: 400px;
+    border-radius: 50% 20% 50% 20%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transition: 0.4s;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
+.about-skills {
+    background: linear-gradient(135deg, #f7d1d1, #ffdede); 
+    padding: 100px 10%;
+    border-radius: 40px 40px 0 0;
+}
+
+.container {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.philosophy,
+.skills {
+    flex: 1;
+}
+
+.philosophy h2,
+.skills h2 {
+    margin-bottom: 20px;
+    color: #610000;
+}
+
+.stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.stats h3 {
+    color: #a4161a; 
+    font-size: 30px;
+}
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.bar {
+    background: #ddd;
+    height: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #a4161a, #610000);
+}
+
+.contact {
+    background: white;
+    padding: 100px 10%;
+}
+
+.contact-container {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: none;
+    outline: none;
+    background-color: #f7d1d1;
+    border-radius: 10px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #a4161a;
+}
+
+.contact-form button {
+    padding: 12px;
+    border: none;
+    background: #a4161a;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-media a {
+    width: 45px;
+    height: 45px;
+    background: #f7d1d1;
+    color: #610000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    transform: translateY(-5px) scale(1.1);
+    color: white;
+}
+
+.social-media a:nth-child(1):hover {
+    background: #0077b5;
+}
+
+.social-media a:nth-child(2):hover {
+    background: #e1306c;
+}
+
+.social-media a:nth-child(3):hover {
+    background: #1877f2;
+}
+
+.footer {
+    background: #111;
+    color: white;
+    padding: 60px 10%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-brand h2 {
+    font-size: 24px;
+}
+
+.footer-brand span {
+    color: #a4161a;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 10px;
+    max-width: 300px;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-copy {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #777;
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 20px 30px;
+        justify-content: center;
+    }
+    
+    nav {
+        margin-top: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    nav, section {
+        padding: 40px 5%;
+    }
+
+    .container, .contact-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stats {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .btn-primary, .btn-outline {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
